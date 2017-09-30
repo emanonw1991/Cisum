@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Cisum</string>
     <string name="copyright">Copyright © 2017&#045;%d SWUST</string>
+    <string name="enter_username">请输入用户名</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="remember_password">是否记住密码</string>
+    <string name="login_register">登陆/注册</string>
 </resources>

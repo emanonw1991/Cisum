@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="@string/app_name"
+                android:textColor="#0099cc"
                 android:textSize="24sp" />
         </LinearLayout>
 

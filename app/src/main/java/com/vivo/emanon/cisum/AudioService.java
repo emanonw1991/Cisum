@@ -8,6 +8,7 @@ import android.os.Environment;
 import android.os.IBinder;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -135,8 +136,15 @@ public class AudioService extends Service {
     }
 
     private void initAudios() {
-        File[] audios = new File(Environment.getExternalStorageDirectory() + "/Music").
-                listFiles();
+        File file = new File(Environment.getExternalStorageDirectory() + "/Music");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File[] audios = file.listFiles();
         for (File audio : audios) {
             audioList.add(audio);
         }
