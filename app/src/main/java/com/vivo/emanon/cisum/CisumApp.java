@@ -1,18 +1,20 @@
 package com.vivo.emanon.cisum;
 
 import android.app.Application;
-import android.content.Intent;
+import android.content.Context;
 
 /**
  * Created by Administrator on 2017/9/29.
  */
 
-public class CisumApp extends Application {
+public class CisumApp extends Application{
+
+    public static Context sContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        startService(new Intent(this, AudioService.class));
-        startService(new Intent(this, StepCounterService.class));
+        sContext = getApplicationContext();
+        AppCache.init(this);
     }
 }

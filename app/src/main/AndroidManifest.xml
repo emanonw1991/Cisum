@@ -5,13 +5,15 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name=".CisumApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">
@@ -34,8 +36,35 @@
             android:enabled="true"
             android:exported="true">
         </service>
+        <service
+            android:name=".ScreenLockService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
 
         <activity android:name=".BaseActivity">
+        </activity>
+        <activity android:name=".MainActivity">
+        </activity>
+
+        <receiver android:name=".DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".NotificationReceiver">
+            <intent-filter>
+                <action android:name="cisum.NOTIFICATION_ACTIONS"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ScreenLockActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.vivo.emanon.cisum.screenlock"
+            android:theme="@style/ScreenLockTheme">
+        </activity>
+        <activity android:name=".AboutActivity">
         </activity>
     </application>
 

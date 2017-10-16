@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lrc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_screen_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#40000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/tv_stepcounter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/text_size_common"
+                android:textAlignment="textStart"
+                android:padding="5dp"
+                android:text="今日步数：0"/>
+
+            <TextView
+                android:id="@+id/tv_screen_title_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_above="@+id/tv_stepcounter"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/text_size_common"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_system_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_above="@+id/tv_screen_title_artist"
+                android:textAlignment="textStart"
+                android:textSize="50sp"
+                android:padding="5dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:id="@+id/rl_screen_controller_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:id="@+id/iv_screen_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_screen_play"
+                    android:src="@drawable/play_btn_prev_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_screen_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/play_btn_play_pause_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_screen_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/iv_screen_play"
+                    android:src="@drawable/play_btn_next_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_screen_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_screen_prev"
+                    android:src="@drawable/play_mode_level_list"/>
+            </RelativeLayout>
+
+
+            <me.wcy.lrcview.LrcView
+                android:id="@+id/lrc_view_screen"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@+id/rl_screen_controller_bar"
+                lrc:lrcAnimationDuration="1000"
+                lrc:lrcCurrentTextColor="@color/white"
+                lrc:lrcDividerHeight="10dp"
+                lrc:lrcNormalTextColor="@color/white"
+                lrc:lrcTextSize="@dimen/text_size_common"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
