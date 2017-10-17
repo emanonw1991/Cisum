@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:overScrollMode="never" />
 
-        <com.vivo.emanon.cisum.IndicatorLayout
+        <com.vivo.emanon.cisum.Views.IndicatorLayout
             android:id="@+id/il_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
