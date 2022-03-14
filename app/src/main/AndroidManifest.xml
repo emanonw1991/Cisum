@@ -2,69 +2,72 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.vivo.emanon.cisum">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:name=".App.CisumApp"
+        android:name=".app.CisumApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.SplashActivity">
+        <activity android:name=".activity.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.LoginActivity">
+        <activity android:name=".activity.LoginActivity">
         </activity>
 
         <service
-            android:name=".Service.AudioService"
+            android:name=".service.AudioService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="false">
         </service>
         <service
-            android:name=".Service.StepCounterService"
+            android:name=".service.StepCounterService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="false">
         </service>
         <service
-            android:name=".Service.ScreenLockService"
+            android:name=".service.ScreenLockService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="false">
         </service>
 
-        <activity android:name=".Activity.BaseActivity">
+        <activity android:name=".activity.BaseActivity">
         </activity>
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".activity.MainActivity">
         </activity>
 
-        <receiver android:name=".Receiver.DownloadReceiver">
+        <receiver android:name=".receiver.DownloadReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
             </intent-filter>
         </receiver>
-        <receiver android:name=".Receiver.NotificationReceiver">
+        <receiver android:name=".receiver.NotificationReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="cisum.NOTIFICATION_ACTIONS"/>
             </intent-filter>
         </receiver>
 
         <activity
-            android:name=".Activity.ScreenLockActivity"
+            android:name=".activity.ScreenLockActivity"
             android:launchMode="singleInstance"
             android:taskAffinity="com.vivo.emanon.cisum.screenlock"
             android:theme="@style/ScreenLockTheme">
         </activity>
-        <activity android:name=".Activity.AboutActivity">
+        <activity android:name=".activity.AboutActivity">
         </activity>
     </application>
 

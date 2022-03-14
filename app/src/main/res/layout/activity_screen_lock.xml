@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lrc="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,13 +8,14 @@
         android:id="@+id/iv_screen_cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"/>
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#40000000">
+        android:background="#40000000"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,32 +26,32 @@
                 android:id="@+id/tv_stepcounter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_alignParentBottom="true"
-                android:textSize="@dimen/text_size_common"
-                android:textAlignment="textStart"
                 android:padding="5dp"
-                android:text="今日步数：0"/>
+                android:text="@string/walks"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_common" />
 
             <TextView
                 android:id="@+id/tv_screen_title_artist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_above="@+id/tv_stepcounter"
+                android:padding="5dp"
                 android:textAlignment="textStart"
-                android:textSize="@dimen/text_size_common"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_common" />
 
             <TextView
                 android:id="@+id/tv_system_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_above="@+id/tv_screen_title_artist"
+                android:padding="5dp"
                 android:textAlignment="textStart"
-                android:textSize="50sp"
-                android:padding="5dp"/>
+                android:textColor="@color/white"
+                android:textSize="50sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -72,6 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/iv_screen_play"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/play_btn_prev_selector" />
 
                 <ImageView
@@ -79,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/play_btn_play_pause_selector" />
 
                 <ImageView
@@ -87,6 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@id/iv_screen_play"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/play_btn_next_selector" />
 
                 <ImageView
@@ -95,7 +98,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/iv_screen_prev"
-                    android:src="@drawable/play_mode_level_list"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/play_mode_level_list" />
             </RelativeLayout>
 
 
@@ -108,10 +112,10 @@
                 lrc:lrcCurrentTextColor="@color/white"
                 lrc:lrcDividerHeight="10dp"
                 lrc:lrcNormalTextColor="@color/white"
-                lrc:lrcTextSize="@dimen/text_size_common"/>
+                lrc:lrcTextSize="@dimen/text_size_common" />
 
         </RelativeLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+</merge>

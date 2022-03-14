@@ -2,7 +2,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="@dimen/activity_horizontal_margin"
-    android:background="@color/blue"
     android:layout_width="match_parent"
     android:gravity="bottom"
     android:layout_height="176dp">
@@ -13,6 +12,6 @@
         android:textSize="50sp"
         android:textColor="@color/white"
         android:textAlignment="textStart"
-        android:text="Cisum"/>
+        android:text="@string/app"/>
 
 </LinearLayout>

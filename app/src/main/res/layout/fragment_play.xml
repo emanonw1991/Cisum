@@ -9,7 +9,9 @@
         android:layout_height="match_parent"
         android:clickable="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/play_page_default_bg" />
+        android:src="@drawable/play_page_default_bg"
+        android:contentDescription="@string/todo"
+        android:focusable="true" />
 
     <LinearLayout
         android:id="@+id/ll_content"
@@ -32,7 +34,8 @@
                 android:paddingTop="8dp"
                 android:background="@drawable/btn_action_bg_selector"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_down" />
+                android:src="@drawable/ic_down"
+                android:contentDescription="@string/todo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines ="1"
-                    android:text="无音乐"
+                    android:text="@string/no_music"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_common" />
 
@@ -61,14 +64,14 @@
             </LinearLayout>
         </LinearLayout>
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_play_page"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:overScrollMode="never" />
 
-        <com.vivo.emanon.cisum.Views.IndicatorLayout
+        <com.vivo.emanon.cisum.views.IndicatorLayout
             android:id="@+id/il_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">@color/grey_900</color>
-    <color name="colorPrimaryDark">@color/colorPrimary</color>
-    <color name="colorAccent">@color/colorPrimary</color>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary" tools:ignore="MissingDefaultResource">@color/grey_900</color>
+    <color name="colorPrimaryDark" tools:ignore="MissingDefaultResource">@color/colorPrimary</color>
+    <color name="colorAccent" tools:ignore="MissingDefaultResource">@color/colorPrimary</color>
 </resources>

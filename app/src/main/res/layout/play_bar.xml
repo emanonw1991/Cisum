@@ -20,7 +20,8 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:scaleType="fitXY"
-            android:src="@drawable/default_cover" />
+            android:src="@drawable/default_cover"
+            android:contentDescription="@string/todo" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -36,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="无音乐"
+                android:text="@string/no_music"
                 android:textSize="@dimen/text_size_common" />
 
             <TextView
@@ -54,14 +55,16 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:padding="5dp"
-            android:src="@drawable/play_bar_btn_play_pause_selector" />
+            android:src="@drawable/play_bar_btn_play_pause_selector"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/iv_play_bar_next"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:padding="5dp"
-            android:src="@drawable/ic_playbar_next" />
+            android:src="@drawable/ic_playbar_next"
+            android:contentDescription="@string/todo" />
     </LinearLayout>
 
     <ProgressBar

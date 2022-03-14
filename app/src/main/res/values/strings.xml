@@ -12,7 +12,7 @@
     <string name="nav_switch_user">切换用户</string>
     <string name="nav_about">关于Cisum</string>
     <string name="no_local_music">暂无本地音乐</string>
-    <string name="loading">努力加载中...</string>
+    <string name="loading">努力加载中…</string>
     <string name="load_fail">加载失败，请检查网络后重试</string>
     <string name="delete_music">删除%s？</string>
     <string name="delete">删除</string>
@@ -21,4 +21,11 @@
     <string name="mode_shuffle">随机播放</string>
     <string name="mode_single">单曲循环</string>
     <string name="mode_loop">列表循环</string>
+    <string name="todo">TODO</string>
+    <string name="no_music">无音乐</string>
+    <string name="welcom">Welcome, this is just A music App.</string>
+    <string name="walks">今日步数：0</string>
+    <string name="songs">歌曲</string>
+    <string name="albums">歌手 - 专辑</string>
+    <string name="app">Cisum</string>
 </resources>

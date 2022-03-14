@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 关于界面 -->
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!-- 关于界面 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/play_page_default_bg"
-        android:scaleType="centerCrop"/>
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/play_page_default_bg" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,19 +19,20 @@
             android:id="@+id/iv_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_logo"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_logo" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_logo"
             android:padding="@dimen/play_bar_height"
+            android:text="@string/welcom"
             android:textAlignment="center"
-            android:text="Welcome, this is just A music App."
-            android:textSize="@dimen/text_size_common"
-            android:textColor="@color/white_96p"/>
+            android:textColor="@color/white_96p"
+            android:textSize="@dimen/text_size_common" />
 
     </RelativeLayout>
 
-</FrameLayout>
+</merge>
